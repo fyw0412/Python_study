@@ -1,5 +1,6 @@
-1��python�еı���������������ʹ�ã�Դ�����д˺ۼ���������search������id��name������û�б�Ҫ
-2����+����ԵĲ�����������ͬһ�����ͣ��ڴ���Ŀ�б���Ϊint
-3�� ��Ը��������ݽṹ���������Ŀ���м�¼ѧ����Ϣ���б���Ƕ���ֵ�ṹ��������Բ���key=value����ʽ��
-4���ļ�����Ķ�ȡ��readlines())���ص���һ���ַ����б����������е�ÿһ��Ԫ�صĵ���ʱ��Ҫע���������͵�ת��������ʹ�õ���dict(eval(list))�ķ���
-5���ļ������д�루write())Ҫע������ܵĲ������ַ�����ʽ
+Python中的变量无须先声明再使用，源代码有此痕迹，比如在search（）中id，name的声明没有必要
+“+”两侧的操作数必须是同一种类型，在此项目中总成绩计算时要确保每一个操作数都是int数据类型，这里用到了字典对象的get(key)方法
+pattern.format()方法中，设计patten时考虑控制台输出美观性，要注意字母与汉字占用的字节数是不同的。
+ 针对复合型数据结构，比如此项目的中记录学生信息的列表中嵌套字典结构，排序可以采用List.sort(key=value,reverse=False/True)的形式，我理解为每一个需要排序的目标一个比较基值，这里表现为学生信息列表中字典元素的某一个键值。reverse默认值是False即按key的value值升序排列，原地修改列表。也可以采用Python3中新增的sorted（literal,key=value,reverse=False)方法，返回一个排序后的列表的复本。
+文件对象的读取（readlines())返回的是一个字符串列表，在对其中的每一个元素复用时，要注意数据类型的转化，这里使用的是dict(eval(list))的方法，将一个字符串对象转化为一个字典对象。
+文件对象的写入（write())要注意其接受的参数是字符串格式
